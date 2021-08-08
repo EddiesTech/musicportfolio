@@ -1,4 +1,6 @@
-<head><title>Bengal Productions Music Portfolio</title></head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bengal Productions Music Portfolio</title></head>
 <body id="body">
     <p>Bengal Productions Music Portfolio</p>
 </body>
@@ -7,7 +9,7 @@
     console.log(resjson)
         resjson.resources.forEach((element)=>{
 var text = document.createElement('p');
-text.innerHTML = element["public_id"];
+text.innerHTML = "<b>"+element["public_id"]+"</b>";
                 var img = document.createElement('audio');
             img.src = 'https://res.cloudinary.com/dhi83lpnp/video/upload/v'+element.version+'/'+element["public_id"]+'.'+element.format;
             img.controls = true;
