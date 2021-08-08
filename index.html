@@ -3,7 +3,7 @@
     <p>Bengal Productions Music Portfolio</p>
 </body>
 <script>
-    fetch("https://res.cloudinary.com/dhi83lpnp/image/list/musicportfolio.json").then((res)=> res.json()).then((resjson)=>{
+    fetch("https://res.cloudinary.com/dhi83lpnp/video/list/musicportfolio.json").then((res)=> res.json()).then((resjson)=>{
     console.log(resjson)
         resjson.resources.forEach((element)=>{
                 var img = document.createElement('audio');
