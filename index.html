@@ -6,9 +6,12 @@
     fetch("https://res.cloudinary.com/dhi83lpnp/video/list/musicportfolio.json").then((res)=> res.json()).then((resjson)=>{
     console.log(resjson)
         resjson.resources.forEach((element)=>{
+var text = document.createElement('p');
+text.innerHTML = element["public_id"];
                 var img = document.createElement('audio');
             img.src = 'https://res.cloudinary.com/dhi83lpnp/video/upload/v'+element.version+'/'+element["public_id"]+'.'+element.format;
             img.controls = true;
+document.getElementById('body').appendChild(text);
 document.getElementById('body').appendChild(img);
         })
     })
