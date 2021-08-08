@@ -8,7 +8,8 @@
         resjson.resources.forEach((element)=>{
                 var img = document.createElement('audio');
             img.src = 'https://res.cloudinary.com/dhi83lpnp/video/upload/v'+element.version+'/'+element["public_id"]+'.'+element.format;
-            document.getElementById('body').appendChild(img);
+            img.controls = true;
+document.getElementById('body').appendChild(img);
         })
     })
 </script>
