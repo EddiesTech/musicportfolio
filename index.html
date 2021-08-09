@@ -17,6 +17,7 @@ text.innerHTML = "<b>"+element["public_id"].split("musicportfolio/")[1]+"</b>";
             img.classList.add("mt-1")
             img.src = 'https://res.cloudinary.com/dhi83lpnp/video/upload/v'+element.version+'/'+element["public_id"]+'.'+element.format;
             img.controls = true;
+            img.controlsList = "nodownload";
 document.getElementById('body').appendChild(text);
 document.getElementById('body').appendChild(img);
         })
