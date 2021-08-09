@@ -4,14 +4,14 @@
 <link rel="stylesheet" href="https://bengal.productions/styles/build.css">
 </head>
 <body id="body" class="p-3">
-    <h1 class="font-bold text-md">Bengal Productions Music Portfolio</h1>
+    <h1 class="font-bold text-lg pb-3">Bengal Productions Music Portfolio</h1>
 </body>
 <script>
     fetch("https://res.cloudinary.com/dhi83lpnp/video/list/musicportfolio.json").then((res)=> res.json()).then((resjson)=>{
     console.log(resjson)
         resjson.resources.forEach((element)=>{
 var text = document.createElement('p');
-text.innerHTML = "<b>"+element["public_id"].split("musicportfolio/")[1]+"</b>";
+text.innerHTML = "<b class='pt-2'>"+element["public_id"].split("musicportfolio/")[1]+"</b>";
                 var img = document.createElement('audio');
             img.src = 'https://res.cloudinary.com/dhi83lpnp/video/upload/v'+element.version+'/'+element["public_id"]+'.'+element.format;
             img.controls = true;
