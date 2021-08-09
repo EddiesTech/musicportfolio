@@ -14,6 +14,7 @@ var text = document.createElement('p');
 text.classList.add("mt-2");
 text.innerHTML = "<b>"+element["public_id"].split("musicportfolio/")[1]+"</b>";
                 var img = document.createElement('audio');
+            img.classList.add("mt-1")
             img.src = 'https://res.cloudinary.com/dhi83lpnp/video/upload/v'+element.version+'/'+element["public_id"]+'.'+element.format;
             img.controls = true;
 document.getElementById('body').appendChild(text);
